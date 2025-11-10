@@ -12,9 +12,13 @@ This helps improve image suggestion and retrieval features in the AI image gener
 2. Use OpenAI Embeddings API to vectorize (convert) text prompts into numeric vectors.
 3. Store vectors using sqlite-vec for local semantic search.
 4. Test with a small dataset (e.g., using about 100 to 500 rows of data.) for the POC.
+5. Store the vector as binary data
 
 #### Related Issues
 
 1. Setup SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec?tab=readme-ov-file).
 2. Connect to [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings).
 3. Insert and search vectors in SQLite
+4. How are images represented? (URLs, file paths, base64, or just metadata?)
+5. What metadata is stored alongside vectors?
+6. How does the schema look like (keep schema small)?
