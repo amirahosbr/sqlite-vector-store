@@ -19,7 +19,7 @@ core: semantic understanding of image + text prompts
 6. Store the vector as binary data.
 7. Require an OpenAI API key for embedding requests.
 
-### Schema
+#### Schema
 
 | Column       | Type                | Description                  |
 | ------------ | ------------------- | ---------------------------- |
