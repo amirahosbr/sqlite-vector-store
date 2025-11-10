@@ -1,39 +1,54 @@
-### Requirement
+## 1. Target
 
-Use sqlite-vec to store and search text or image-related by semantic meaning using OpenAI Embeddings API.
+Use sqlite-vec to store and search knowledge graph data by semantic meaning using OpenAI Embeddings API.
 
-The goal is to find text or images that are similar in meaning, not just by keyword text matching.
+The goal is to find knowledge graph files that are similar in meaning, not just by keyword text matching.
 
-This helps improve text or image suggestion and retrieval features in the AI image generation workflow.
+Knowledge graphs are saved as JSON files in object storage. The vector database is used to resolve the path to the knowledge file based on semantic similarity.
 
-core: semantic understanding of image + text prompts
+**Core:** semantic understanding of text content to resolve knowledge graph file paths
 
-### Notes
+## 2. Specification / Test Plan
+
+### Implementation Details
 
 1. Use TypeScript (Node.js) for implementation.
-2. Use OpenAI Embeddings API to vectorize (convert) text prompts into numeric vectors.
-   - use text `text-embedding-3-small` model (cheapest).
+2. Use OpenAI Embeddings API to vectorize (convert) text content into numeric vectors.
+   - Use `text-embedding-3-small` model (cheapest).
 3. Store vectors using sqlite-vec for local semantic search.
-4. Test with a small dataset (e.g., using about 100 to 500 rows of data.) for the POC.
+4. Test with a small dataset (e.g., using about 100 to 500 rows of data) for the POC.
 5. Define the schema (simple schema).
 6. Store the vector as binary data.
 7. Require an OpenAI API key for embedding requests.
 
-#### Schema
+#### Database Schema
 
-| Column       | Type                | Description                  |
-| ------------ | ------------------- | ---------------------------- |
-| `id`         | INTEGER PRIMARY KEY | Record ID                    |
-| `prompt`     | TEXT                | Original text prompt         |
-| `vector`     | BLOB                | Embedded vector from OpenAI  |
-| `image_url`  | TEXT                | Image path or URL (optional) |
-| `created_at` | DATETIME            | Timestamp                    |
+| Column          | Type                | Description                       |
+| --------------- | ------------------- | --------------------------------- |
+| `id`            | INTEGER PRIMARY KEY | Record ID                         |
+| `src_file_path` | TEXT                | Path to knowledge graph JSON file |
+| `vector`        | BLOB                | Embedded vector from OpenAI       |
+| `created_at`    | DATETIME            | Timestamp                         |
 
-#### Related Issues
+### Tasks
 
 1. Setup SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec?tab=readme-ov-file).
 2. Connect to [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings).
-3. Insert and search vectors in SQLite
-4. Decide how images are represented — URLs, file paths, base64, or metadata only. (file paths probably the best fit)
-5. Define what metadata to store alongside vectors (e.g., creator, tags, model version). (minimal)
-6. Other alternatives to OpenAI Embeddings API?
+3. Insert and search vectors in SQLite.
+4. Store minimal metadata alongside vectors.
+
+## 3. Additional Instructions / Notes for Shipping (optional)
+
+N/A
+
+## 4. Check before Review Request
+
+- [ ] Self Review : I reviewed changes by myself and approved them.
+  - Ensure there is no sensitive information, typos, unrelated changes, or debugging code.
+- [ ] Evidence : I attached evidences to prove the changes.
+  - Record and attach a demo video. For minor changes, attaching an image is also acceptable.
+  - Evidences should be updated to the latest version when further changes are made.
+
+## 5. Evidence
+
+(Attach here before request review)
