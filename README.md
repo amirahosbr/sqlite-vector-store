@@ -15,17 +15,25 @@ core: semantic understanding of image + text prompts
    - use text `text-embedding-3-small` model (cheapest).
 3. Store vectors using sqlite-vec for local semantic search.
 4. Test with a small dataset (e.g., using about 100 to 500 rows of data.) for the POC.
-5. Define the schema for the database.
+5. Define the schema (simple schema).
 6. Store the vector as binary data.
 7. Require an OpenAI API key for embedding requests.
+
+### Schema
+
+| Column       | Type                | Description                  |
+| ------------ | ------------------- | ---------------------------- |
+| `id`         | INTEGER PRIMARY KEY | Record ID                    |
+| `prompt`     | TEXT                | Original text prompt         |
+| `vector`     | BLOB                | Embedded vector from OpenAI  |
+| `image_url`  | TEXT                | Image path or URL (optional) |
+| `created_at` | DATETIME            | Timestamp                    |
 
 #### Related Issues
 
 1. Setup SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec?tab=readme-ov-file).
 2. Connect to [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings).
 3. Insert and search vectors in SQLite
-4. Decide how images are represented — URLs, file paths, base64, or metadata only.
-5. Define what metadata to store alongside vectors (e.g., creator, tags, model version).
-6. What metadata is stored alongside vectors?
-7. How does the schema look like (keep schema small)?
-8. Other alternatives to OpenAI Embeddings API?
+4. Decide how images are represented — URLs, file paths, base64, or metadata only. (file paths probably the best fit)
+5. Define what metadata to store alongside vectors (e.g., creator, tags, model version). (minimal)
+6. Other alternatives to OpenAI Embeddings API?
