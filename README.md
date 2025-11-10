@@ -2,7 +2,7 @@
 
 Use sqlite-vec to store and search text or image-related by semantic meaning using OpenAI Embeddings API.
 
-The goal is to quickly find text or images that are similar in meaning, not just by keyword text matching.
+The goal is to find text or images that are similar in meaning, not just by keyword text matching.
 
 This helps improve text or image suggestion and retrieval features in the AI image generation workflow.
 
