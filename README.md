@@ -1,24 +1,31 @@
 ### Requirement
 
-Use sqlite-vec to store and search image-related and text data by semantic meaning using OpenAI Embeddings API.
+Use sqlite-vec to store and search text or image-related by semantic meaning using OpenAI Embeddings API.
 
-The goal is to quickly find images or text that are similar in meaning, not just by keyword text matching.
+The goal is to quickly find text or images that are similar in meaning, not just by keyword text matching.
 
-This helps improve image suggestion and retrieval features in the AI image generation workflow.
+This helps improve text or image suggestion and retrieval features in the AI image generation workflow.
+
+core: semantic understanding of image + text prompts
 
 ### Notes
 
 1. Use TypeScript (Node.js) for implementation.
 2. Use OpenAI Embeddings API to vectorize (convert) text prompts into numeric vectors.
+   - use text `text-embedding-3-small` model (cheapest).
 3. Store vectors using sqlite-vec for local semantic search.
 4. Test with a small dataset (e.g., using about 100 to 500 rows of data.) for the POC.
-5. Store the vector as binary data
+5. Define the schema for the database.
+6. Store the vector as binary data.
+7. Require an OpenAI API key for embedding requests.
 
 #### Related Issues
 
 1. Setup SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec?tab=readme-ov-file).
 2. Connect to [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings).
 3. Insert and search vectors in SQLite
-4. How are images represented? (URLs, file paths, base64, or just metadata?)
-5. What metadata is stored alongside vectors?
-6. How does the schema look like (keep schema small)?
+4. Decide how images are represented — URLs, file paths, base64, or metadata only.
+5. Define what metadata to store alongside vectors (e.g., creator, tags, model version).
+6. What metadata is stored alongside vectors?
+7. How does the schema look like (keep schema small)?
+8. Other alternatives to OpenAI Embeddings API?
