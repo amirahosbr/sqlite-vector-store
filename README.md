@@ -1,5 +1,9 @@
 ## 1. Target
 
+- Closes #1
+
+## 2. Specification / Test Plan
+
 Use sqlite-vec to store and search knowledge graph data by semantic meaning using OpenAI Embeddings API.
 
 The goal is to find knowledge graph files that are similar in meaning, not just by keyword text matching.
@@ -8,9 +12,14 @@ Knowledge graphs are saved as JSON files in object storage. The vector database 
 
 **Core:** semantic understanding of text content to resolve knowledge graph file paths
 
-## 2. Specification / Test Plan
+**Tasks**
 
-### Implementation Details
+1. Setup SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec?tab=readme-ov-file).
+2. Connect to [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings).
+3. Insert and search vectors in SQLite.
+4. Store minimal metadata alongside vectors.
+
+## 3. Additional Instructions / Notes for Shipping (optional)
 
 1. Use TypeScript (Node.js) for implementation.
 2. Use OpenAI Embeddings API to vectorize (convert) text content into numeric vectors.
@@ -29,17 +38,6 @@ Knowledge graphs are saved as JSON files in object storage. The vector database 
 | `src_file_path` | TEXT                | Path to knowledge graph JSON file |
 | `vector`        | BLOB                | Embedded vector from OpenAI       |
 | `created_at`    | DATETIME            | Timestamp                         |
-
-### Tasks
-
-1. Setup SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec?tab=readme-ov-file).
-2. Connect to [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings).
-3. Insert and search vectors in SQLite.
-4. Store minimal metadata alongside vectors.
-
-## 3. Additional Instructions / Notes for Shipping (optional)
-
-N/A
 
 ## 4. Check before Review Request
 
