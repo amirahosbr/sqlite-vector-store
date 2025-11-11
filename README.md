@@ -1,6 +1,6 @@
 ## 1. Target
 
-- Closes #1
+- Closes [#1](https://github.com/amirahosbr/sqlite-vector-store/issues/1)
 
 ## 2. Specification / Test Plan
 
