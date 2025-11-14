@@ -140,7 +140,7 @@ const main = async (): Promise<void> => {
   console.log("\n--- Semantic Search Demo ---\n");
 
   const queries = [
-    "i love pizza",
+    "A knowledge graph about pizza varieties including ingredients, preparation methods, and culinary traditions",
     "i love desserts",
     "i love cakes",
     "i hate pizza",
