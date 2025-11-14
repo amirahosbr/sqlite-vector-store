@@ -1,0 +1,33 @@
+{
+  "name": "Cloud Computing",
+  "description": "Knowledge graph covering cloud infrastructure, containerization, microservices, and serverless computing",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Cloud Platform",
+      "description": "On-demand computing resources over the internet"
+    },
+    {
+      "id": "n2",
+      "label": "Docker",
+      "description": "Platform for containerizing applications"
+    },
+    {
+      "id": "n3",
+      "label": "Kubernetes",
+      "description": "Container orchestration system"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "deploys"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "label": "managed_by"
+    }
+  ]
+}

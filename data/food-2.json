@@ -1,0 +1,243 @@
+{
+  "name": "Cakes",
+  "description": "A knowledge graph about different types of cakes including ingredients, preparation methods, flavors, and baking techniques",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Cake",
+      "description": "Sweet baked dessert typically made from flour, sugar, eggs, and butter"
+    },
+    {
+      "id": "n2",
+      "label": "Chocolate Cake",
+      "description": "Rich cake made with cocoa powder or melted chocolate"
+    },
+    {
+      "id": "n3",
+      "label": "Vanilla Cake",
+      "description": "Classic cake flavored with vanilla extract"
+    },
+    {
+      "id": "n4",
+      "label": "Strawberry Cake",
+      "description": "Cake made with fresh strawberries or strawberry flavoring"
+    },
+    {
+      "id": "n5",
+      "label": "Red Velvet Cake",
+      "description": "Southern American cake with distinctive red color and cream cheese frosting"
+    },
+    {
+      "id": "n6",
+      "label": "Cheesecake",
+      "description": "Sweet dessert with a thick, creamy filling of cheese, eggs, and sugar"
+    },
+    {
+      "id": "n7",
+      "label": "Carrot Cake",
+      "description": "Moist cake made with grated carrots, spices, and often topped with cream cheese frosting"
+    },
+    {
+      "id": "n8",
+      "label": "Flour",
+      "description": "Powder made by grinding grains, essential ingredient in cake baking"
+    },
+    {
+      "id": "n9",
+      "label": "Sugar",
+      "description": "Sweet crystalline substance used to sweeten cakes"
+    },
+    {
+      "id": "n10",
+      "label": "Eggs",
+      "description": "Used as binding agent and leavening in cake recipes"
+    },
+    {
+      "id": "n11",
+      "label": "Butter",
+      "description": "Dairy product used for richness and moisture in cakes"
+    },
+    {
+      "id": "n12",
+      "label": "Cocoa Powder",
+      "description": "Powdered form of chocolate used in chocolate cakes"
+    },
+    {
+      "id": "n13",
+      "label": "Strawberries",
+      "description": "Fresh fruit used in strawberry cakes for flavor and decoration"
+    },
+    {
+      "id": "n14",
+      "label": "Baking Powder",
+      "description": "Leavening agent that helps cakes rise"
+    },
+    {
+      "id": "n15",
+      "label": "Frosting",
+      "description": "Sweet coating or filling for cakes"
+    },
+    {
+      "id": "n16",
+      "label": "Cream Cheese Frosting",
+      "description": "Frosting made from cream cheese, butter, and powdered sugar"
+    },
+    {
+      "id": "n17",
+      "label": "Chocolate Frosting",
+      "description": "Rich frosting made with chocolate and butter"
+    },
+    {
+      "id": "n18",
+      "label": "Baking",
+      "description": "Cooking method using dry heat in an oven"
+    },
+    {
+      "id": "n19",
+      "label": "Layer Cake",
+      "description": "Cake made with multiple layers stacked with frosting between"
+    },
+    {
+      "id": "n20",
+      "label": "Sheet Cake",
+      "description": "Single-layer cake baked in a rectangular pan"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n4",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n5",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n7",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n8",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n18",
+      "label": "prepared_by"
+    },
+    {
+      "source": "n2",
+      "target": "n12",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n2",
+      "target": "n17",
+      "label": "often_topped_with"
+    },
+    {
+      "source": "n4",
+      "target": "n13",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n4",
+      "target": "n15",
+      "label": "often_topped_with"
+    },
+    {
+      "source": "n5",
+      "target": "n16",
+      "label": "traditionally_frosted_with"
+    },
+    {
+      "source": "n6",
+      "target": "n16",
+      "label": "commonly_topped_with"
+    },
+    {
+      "source": "n7",
+      "target": "n16",
+      "label": "traditionally_frosted_with"
+    },
+    {
+      "source": "n1",
+      "target": "n19",
+      "label": "can_be"
+    },
+    {
+      "source": "n1",
+      "target": "n20",
+      "label": "can_be"
+    },
+    {
+      "source": "n2",
+      "target": "n8",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n2",
+      "target": "n9",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n3",
+      "target": "n8",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n3",
+      "target": "n9",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n4",
+      "target": "n8",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n4",
+      "target": "n9",
+      "label": "uses_ingredient"
+    }
+  ]
+}

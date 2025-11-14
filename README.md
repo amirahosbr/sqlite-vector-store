@@ -1,36 +1,49 @@
-## 1. Target
+# SQLite Vector Store
 
-- Closes [#1](https://github.com/amirahosbr/sqlite-vector-store/issues/1)
+A semantic search system for knowledge graphs using SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec) and OpenAI embeddings. Find knowledge graph files by semantic meaning, not just keyword matching.
 
-## 2. Specification / Test Plan
+## Overview
 
-Use sqlite-vec to store and search knowledge graph data by semantic meaning using OpenAI Embeddings API.
-
-The goal is to find knowledge graph files that are similar in meaning, not just by keyword text matching.
+This project enables semantic search over knowledge graphs stored as JSON files. Instead of traditional text matching, it uses vector embeddings to find knowledge graphs that are similar in meaning to your query.
 
 Knowledge graphs are saved as JSON files in object storage. The vector database is used to resolve the path to the knowledge file based on semantic similarity.
 
-**Core:** semantic understanding of text content to resolve knowledge graph file paths
+**Key Features:**
 
-**Tasks**
+- Store and search knowledge graphs by semantic similarity
+- Uses OpenAI's `text-embedding-3-small` model for cost-effective embeddings
+- Local SQLite database with sqlite-vec extension
+- TypeScript implementation with Node.js
 
-1. Setup SQLite with [sqlite-vec](https://github.com/asg017/sqlite-vec?tab=readme-ov-file).
-2. Connect to [OpenAI Embeddings API](https://platform.openai.com/docs/guides/embeddings).
-3. Insert and search vectors in SQLite.
-4. Store minimal metadata alongside vectors.
+## Quick Start
 
-## 3. Additional Instructions / Notes for Shipping (optional)
+See [QUICKSTART.md](QUICKSTART.md) for detailed setup instructions.
 
-1. Use TypeScript (Node.js) for implementation.
-2. Use OpenAI Embeddings API to vectorize (convert) text content into numeric vectors.
-   - Use `text-embedding-3-small` model (cheapest).
-3. Store vectors using sqlite-vec for local semantic search.
-4. Test with a small dataset (e.g., using about 100 to 500 rows of data) for the POC.
-5. Define the schema (simple schema).
-6. Store the vector as binary data.
-7. Require an OpenAI API key for embedding requests.
+```bash
+# Install dependencies
+npm install
 
-#### Database Schema
+# Set your OpenAI API key
+export OPENAI_API_KEY=sk-your-key-here
+
+# Run
+```
+
+## How It Works
+
+### Understanding Embeddings
+
+1. **Embedding vector** is a long list of numbers that represents the meaning of text, image, or data → `"apple fruit"` → `[0.12, -0.44, ..., 0.05]`. The closer the vectors, the more similar meanings.
+
+2. **sqlite-vec** is a vector extension for SQLite — it can store these numeric vectors and search by semantic similarity. Cannot be plain text because it only matches exact words, not meaning.
+
+3. **sqlite-vec** returns the distance between vectors → smaller = more similar meaning (typically 0.0 – 1.5).
+
+4. **Two ways to measure similarity** between embeddings:
+   - **Cosine distance**: Checks if vectors point the same way → suitable for text (used for meaning)
+   - **Euclidean distance**: Measures straight-line space between points → not suitable for text (used for images/maps)
+
+### Database Schema
 
 | Column          | Type                | Description                       |
 | --------------- | ------------------- | --------------------------------- |
@@ -39,14 +52,29 @@ Knowledge graphs are saved as JSON files in object storage. The vector database 
 | `vector`        | BLOB                | Embedded vector from OpenAI       |
 | `created_at`    | DATETIME            | Timestamp                         |
 
-## 4. Check before Review Request
+## Glossary
 
-- [ ] Self Review : I reviewed changes by myself and approved them.
-  - Ensure there is no sensitive information, typos, unrelated changes, or debugging code.
-- [ ] Evidence : I attached evidences to prove the changes.
-  - Record and attach a demo video. For minor changes, attaching an image is also acceptable.
-  - Evidences should be updated to the latest version when further changes are made.
+| Term          | What It Means                                              | Example              |
+| ------------- | ---------------------------------------------------------- | -------------------- |
+| **Embedding** | A list of numbers that **means** the text                  | `[0.12, -0.44, ...]` |
+| **Vector**    | Same as embedding — just the list of numbers               | `[0.12, -0.44, ...]` |
+| **Distance**  | How **different** two vectors are (smaller = more similar) | `0.087`              |
 
-## 5. Evidence
+## Project Structure
 
-(Attach here before request review)
+- `src/database.ts` - SQLite + sqlite-vec integration
+- `src/embeddings.ts` - OpenAI API + text extraction
+- `src/demo.ts` - Demo script
+- `data/` - Sample knowledge graph JSON files
+
+## Requirements
+
+- Node.js
+- OpenAI API key
+- SQLite with sqlite-vec extension (installed via npm)
+
+## Related Links
+
+- Repository: https://github.com/amirahosbr/sqlite-vector-store
+- sqlite-vec: https://github.com/asg017/sqlite-vec
+- OpenAI Embeddings API: https://platform.openai.com/docs/guides/embeddings

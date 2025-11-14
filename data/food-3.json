@@ -1,0 +1,283 @@
+{
+  "name": "Desserts",
+  "description": "A knowledge graph about various desserts including ice cream, puddings, pastries, and frozen treats with their ingredients and preparation methods",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Desserts",
+      "description": "Sweet course typically served at the end of a meal"
+    },
+    {
+      "id": "n2",
+      "label": "Ice Cream",
+      "description": "Frozen dessert made from cream, sugar, and flavorings"
+    },
+    {
+      "id": "n3",
+      "label": "Vanilla Ice Cream",
+      "description": "Classic ice cream flavored with vanilla"
+    },
+    {
+      "id": "n4",
+      "label": "Chocolate Ice Cream",
+      "description": "Rich ice cream made with cocoa or chocolate"
+    },
+    {
+      "id": "n5",
+      "label": "Strawberry Ice Cream",
+      "description": "Ice cream made with fresh strawberries"
+    },
+    {
+      "id": "n6",
+      "label": "Pudding",
+      "description": "Creamy dessert typically made with milk, sugar, and a thickening agent"
+    },
+    {
+      "id": "n7",
+      "label": "Chocolate Pudding",
+      "description": "Smooth chocolate-flavored pudding"
+    },
+    {
+      "id": "n8",
+      "label": "Vanilla Pudding",
+      "description": "Classic vanilla-flavored pudding"
+    },
+    {
+      "id": "n9",
+      "label": "Tiramisu",
+      "description": "Italian dessert made of coffee-soaked ladyfingers layered with mascarpone"
+    },
+    {
+      "id": "n10",
+      "label": "Gelato",
+      "description": "Italian-style ice cream with a denser, more intense flavor"
+    },
+    {
+      "id": "n11",
+      "label": "Sorbet",
+      "description": "Frozen dessert made from fruit puree, sugar, and water without dairy"
+    },
+    {
+      "id": "n12",
+      "label": "Panna Cotta",
+      "description": "Italian dessert of sweetened cream thickened with gelatin"
+    },
+    {
+      "id": "n13",
+      "label": "Cream",
+      "description": "High-fat dairy product used in many desserts"
+    },
+    {
+      "id": "n14",
+      "label": "Sugar",
+      "description": "Sweet crystalline substance used to sweeten desserts"
+    },
+    {
+      "id": "n15",
+      "label": "Milk",
+      "description": "Dairy liquid used as a base for many desserts"
+    },
+    {
+      "id": "n16",
+      "label": "Vanilla Extract",
+      "description": "Flavoring extracted from vanilla beans"
+    },
+    {
+      "id": "n17",
+      "label": "Cocoa",
+      "description": "Chocolate powder used in chocolate desserts"
+    },
+    {
+      "id": "n18",
+      "label": "Strawberries",
+      "description": "Fresh fruit used in various desserts"
+    },
+    {
+      "id": "n19",
+      "label": "Freezing",
+      "description": "Chilling method used to solidify frozen desserts"
+    },
+    {
+      "id": "n20",
+      "label": "Chilling",
+      "description": "Refrigeration method used to set many desserts"
+    },
+    {
+      "id": "n21",
+      "label": "Italian Cuisine",
+      "description": "Traditional cooking style originating from Italy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "includes"
+    },
+    {
+      "source": "n1",
+      "target": "n6",
+      "label": "includes"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "label": "includes"
+    },
+    {
+      "source": "n1",
+      "target": "n10",
+      "label": "includes"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "label": "includes"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "label": "includes"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "label": "includes_type"
+    },
+    {
+      "source": "n2",
+      "target": "n4",
+      "label": "includes_type"
+    },
+    {
+      "source": "n2",
+      "target": "n5",
+      "label": "includes_type"
+    },
+    {
+      "source": "n2",
+      "target": "n13",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n2",
+      "target": "n14",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n2",
+      "target": "n19",
+      "label": "prepared_by"
+    },
+    {
+      "source": "n3",
+      "target": "n16",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n4",
+      "target": "n17",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n5",
+      "target": "n18",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "label": "includes_type"
+    },
+    {
+      "source": "n6",
+      "target": "n8",
+      "label": "includes_type"
+    },
+    {
+      "source": "n6",
+      "target": "n15",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n6",
+      "target": "n14",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n6",
+      "target": "n20",
+      "label": "prepared_by"
+    },
+    {
+      "source": "n7",
+      "target": "n17",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n8",
+      "target": "n16",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n9",
+      "target": "n21",
+      "label": "originates_from"
+    },
+    {
+      "source": "n9",
+      "target": "n20",
+      "label": "prepared_by"
+    },
+    {
+      "source": "n10",
+      "target": "n21",
+      "label": "originates_from"
+    },
+    {
+      "source": "n10",
+      "target": "n19",
+      "label": "prepared_by"
+    },
+    {
+      "source": "n10",
+      "target": "n13",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n10",
+      "target": "n14",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n11",
+      "target": "n14",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n11",
+      "target": "n19",
+      "label": "prepared_by"
+    },
+    {
+      "source": "n12",
+      "target": "n13",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n12",
+      "target": "n14",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n12",
+      "target": "n21",
+      "label": "originates_from"
+    },
+    {
+      "source": "n12",
+      "target": "n20",
+      "label": "prepared_by"
+    }
+  ]
+}
