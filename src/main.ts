@@ -45,8 +45,50 @@ async function indexKnowledgeGraphs(dataDir: string) {
   for (const filePath of files) {
     const kg = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
-    // Generate embedding from summary or description
-    const text = kg.summary || kg.description || kg.title || kg.name || "";
+    // Extract text from multiple sources
+    let text = kg.summary || kg.description || kg.title || kg.name || "";
+
+    // If no root-level text, extract from triplets
+    if (!text && kg.triplets && Array.isArray(kg.triplets)) {
+      const parts: string[] = [];
+      kg.triplets.forEach((triplet: unknown) => {
+        const t = triplet as Record<string, unknown>;
+
+        // Extract subject
+        if (t.subject) {
+          const subj = t.subject as Record<string, unknown>;
+          if (subj.name) parts.push(String(subj.name));
+          if (subj.entity_type) parts.push(String(subj.entity_type));
+          if (Array.isArray(subj.attributes)) {
+            subj.attributes.forEach((attr: unknown) => {
+              const a = attr as Record<string, unknown>;
+              if (a.value) parts.push(String(a.value));
+            });
+          }
+        }
+
+        // Extract predicate
+        if (t.predicate) {
+          const pred = t.predicate as Record<string, unknown>;
+          if (pred.name) parts.push(String(pred.name));
+        }
+
+        // Extract object
+        if (t.object) {
+          const obj = t.object as Record<string, unknown>;
+          if (obj.name) parts.push(String(obj.name));
+          if (obj.entity_type) parts.push(String(obj.entity_type));
+          if (Array.isArray(obj.attributes)) {
+            obj.attributes.forEach((attr: unknown) => {
+              const a = attr as Record<string, unknown>;
+              if (a.value) parts.push(String(a.value));
+            });
+          }
+        }
+      });
+      text = parts.join(" ");
+    }
+
     const response = await openai.embeddings.create({
       model: "text-embedding-3-small",
       input: text,
