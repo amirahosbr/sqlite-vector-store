@@ -27,6 +27,7 @@ npm install
 export OPENAI_API_KEY=sk-your-key-here
 
 # Run
+npm run demo
 ```
 
 ## How It Works
