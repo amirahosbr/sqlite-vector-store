@@ -1,0 +1,33 @@
+{
+  "name": "Natural Language Processing",
+  "description": "Knowledge about text processing, sentiment analysis, named entity recognition, and language models",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "NLP",
+      "description": "Natural Language Processing - interaction between computers and human language"
+    },
+    {
+      "id": "n2",
+      "label": "Tokenization",
+      "description": "Breaking text into words or subwords"
+    },
+    {
+      "id": "n3",
+      "label": "Transformer",
+      "description": "Deep learning architecture for processing sequences"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "requires"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "label": "powered_by"
+    }
+  ]
+}

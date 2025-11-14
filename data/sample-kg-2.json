@@ -1,0 +1,33 @@
+{
+  "name": "Database Systems",
+  "description": "Knowledge graph covering relational databases, SQL queries, indexing, and transaction management",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Database",
+      "description": "Organized collection of structured information"
+    },
+    {
+      "id": "n2",
+      "label": "SQL",
+      "description": "Structured Query Language for managing relational databases"
+    },
+    {
+      "id": "n3",
+      "label": "Indexing",
+      "description": "Data structure that improves query performance"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "queried_with"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "label": "optimized_by"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Web Development",
+  "description": "Knowledge graph about frontend and backend web technologies, HTTP protocols, and web frameworks",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Web Application",
+      "description": "Software application that runs in a web browser"
+    },
+    {
+      "id": "n2",
+      "label": "HTTP",
+      "description": "Hypertext Transfer Protocol for web communication"
+    },
+    {
+      "id": "n3",
+      "label": "React",
+      "description": "JavaScript library for building user interfaces"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "uses_protocol"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "label": "built_with"
+    }
+  ]
+}

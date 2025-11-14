@@ -1,0 +1,747 @@
+{
+  "triplets": [
+    {
+      "id": 1,
+      "subject": {
+        "id": 1,
+        "name": "Article: Essential Hypertension Management and Treatment Guidelines",
+        "entity_type": "PUBLICATION",
+        "attributes": [
+          {
+            "key": "title",
+            "value": "Essential Hypertension Management and Treatment Guidelines: Evidence-Based Approach"
+          },
+          {
+            "key": "year",
+            "value": "2023"
+          },
+          {
+            "key": "doi",
+            "value": "10.1016/j.hypertension.2023.789012"
+          },
+          {
+            "key": "claim",
+            "value": "Comprehensive review of hypertension management strategies and treatment protocols"
+          },
+          {
+            "key": "published_online",
+            "value": "2023-09-20"
+          }
+        ]
+      },
+      "predicate": {
+        "id": 1,
+        "name": "published_in"
+      },
+      "object": {
+        "id": 2,
+        "name": "Journal of Hypertension Research",
+        "entity_type": "JOURNAL",
+        "attributes": [
+          {
+            "key": "subtitle",
+            "value": "Cardiovascular Medicine and Research"
+          },
+          {
+            "key": "publisher",
+            "value": "Cardiovascular Publishing House"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 2,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": [
+          {
+            "key": "type",
+            "value": "Primary hypertension"
+          },
+          {
+            "key": "prevalence",
+            "value": "Affects 30% of adults globally"
+          }
+        ]
+      },
+      "predicate": {
+        "id": 2,
+        "name": "defined_as"
+      },
+      "object": {
+        "id": 4,
+        "name": "Persistent elevated blood pressure",
+        "entity_type": "CONCEPT",
+        "attributes": [
+          {
+            "key": "feature",
+            "value": "Systolic ≥140 mmHg or Diastolic ≥90 mmHg"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 3,
+      "subject": {
+        "id": 5,
+        "name": "Patient (62-year-old male)",
+        "entity_type": "PERSON",
+        "attributes": [
+          {
+            "key": "age",
+            "value": "62"
+          },
+          {
+            "key": "sex",
+            "value": "Male"
+          },
+          {
+            "key": "diagnosis_mode",
+            "value": "Routine checkup"
+          },
+          {
+            "key": "setting",
+            "value": "Cardiology Clinic"
+          },
+          {
+            "key": "location",
+            "value": "Boston, USA"
+          }
+        ]
+      },
+      "predicate": {
+        "id": 3,
+        "name": "diagnosed_with"
+      },
+      "object": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": [
+          {
+            "key": "systolic_bp",
+            "value": "158 mmHg"
+          },
+          {
+            "key": "diastolic_bp",
+            "value": "95 mmHg"
+          },
+          {
+            "key": "stage",
+            "value": "Stage 2 Hypertension"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 4,
+      "subject": {
+        "id": 5,
+        "name": "Patient (62-year-old male)",
+        "entity_type": "PERSON",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 4,
+        "name": "has_symptom"
+      },
+      "object": {
+        "id": 6,
+        "name": "Headaches",
+        "entity_type": "SYMPTOM",
+        "attributes": [
+          {
+            "key": "details",
+            "value": "Morning headaches, often occipital"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 5,
+      "subject": {
+        "id": 5,
+        "name": "Patient (62-year-old male)",
+        "entity_type": "PERSON",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 5,
+        "name": "has_symptom"
+      },
+      "object": {
+        "id": 7,
+        "name": "Dizziness",
+        "entity_type": "SYMPTOM",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 6,
+      "subject": {
+        "id": 5,
+        "name": "Patient (62-year-old male)",
+        "entity_type": "PERSON",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 6,
+        "name": "has_symptom"
+      },
+      "object": {
+        "id": 8,
+        "name": "Chest pain",
+        "entity_type": "SYMPTOM",
+        "attributes": [
+          {
+            "key": "details",
+            "value": "Occasional, non-exertional"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 7,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 7,
+        "name": "risk_factors"
+      },
+      "object": {
+        "id": 9,
+        "name": "Age",
+        "entity_type": "CONCEPT",
+        "attributes": [
+          {
+            "key": "details",
+            "value": "Risk increases with age, especially over 55"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 8,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 8,
+        "name": "risk_factors"
+      },
+      "object": {
+        "id": 10,
+        "name": "Family history",
+        "entity_type": "CONCEPT",
+        "attributes": [
+          {
+            "key": "details",
+            "value": "Genetic predisposition"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 9,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 9,
+        "name": "risk_factors"
+      },
+      "object": {
+        "id": 11,
+        "name": "High sodium diet",
+        "entity_type": "CONCEPT",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 10,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 10,
+        "name": "risk_factors"
+      },
+      "object": {
+        "id": 12,
+        "name": "Physical inactivity",
+        "entity_type": "CONCEPT",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 11,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 11,
+        "name": "treated_with"
+      },
+      "object": {
+        "id": 13,
+        "name": "ACE Inhibitors",
+        "entity_type": "MEDICATION",
+        "attributes": [
+          {
+            "key": "class",
+            "value": "Angiotensin-converting enzyme inhibitor"
+          },
+          {
+            "key": "example",
+            "value": "Lisinopril, Enalapril"
+          },
+          {
+            "key": "mechanism",
+            "value": "Blocks conversion of angiotensin I to angiotensin II"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 12,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 12,
+        "name": "treated_with"
+      },
+      "object": {
+        "id": 14,
+        "name": "Calcium Channel Blockers",
+        "entity_type": "MEDICATION",
+        "attributes": [
+          {
+            "key": "class",
+            "value": "CCB"
+          },
+          {
+            "key": "example",
+            "value": "Amlodipine, Diltiazem"
+          },
+          {
+            "key": "mechanism",
+            "value": "Relaxes blood vessels by blocking calcium entry"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 13,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 13,
+        "name": "treated_with"
+      },
+      "object": {
+        "id": 15,
+        "name": "Diuretics",
+        "entity_type": "MEDICATION",
+        "attributes": [
+          {
+            "key": "class",
+            "value": "Thiazide diuretics"
+          },
+          {
+            "key": "example",
+            "value": "Hydrochlorothiazide"
+          },
+          {
+            "key": "mechanism",
+            "value": "Reduces blood volume by increasing urine output"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 14,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 14,
+        "name": "complications"
+      },
+      "object": {
+        "id": 16,
+        "name": "Stroke",
+        "entity_type": "CONDITION",
+        "attributes": [
+          {
+            "key": "description",
+            "value": "Increased risk of ischemic and hemorrhagic stroke"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 15,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 15,
+        "name": "complications"
+      },
+      "object": {
+        "id": 17,
+        "name": "Heart attack",
+        "entity_type": "CONDITION",
+        "attributes": [
+          {
+            "key": "description",
+            "value": "Myocardial infarction due to increased cardiac workload"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 16,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 16,
+        "name": "complications"
+      },
+      "object": {
+        "id": 18,
+        "name": "Kidney disease",
+        "entity_type": "CONDITION",
+        "attributes": [
+          {
+            "key": "description",
+            "value": "Hypertensive nephropathy leading to chronic kidney disease"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 17,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 17,
+        "name": "complications"
+      },
+      "object": {
+        "id": 19,
+        "name": "Vision loss",
+        "entity_type": "CONDITION",
+        "attributes": [
+          {
+            "key": "description",
+            "value": "Hypertensive retinopathy"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 18,
+      "subject": {
+        "id": 20,
+        "name": "Blood pressure measurement",
+        "entity_type": "TEST",
+        "attributes": [
+          {
+            "key": "modality",
+            "value": "Sphygmomanometer"
+          },
+          {
+            "key": "frequency",
+            "value": "Regular monitoring, at least annually"
+          }
+        ]
+      },
+      "predicate": {
+        "id": 18,
+        "name": "diagnoses"
+      },
+      "object": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 19,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 19,
+        "name": "monitored_by"
+      },
+      "object": {
+        "id": 20,
+        "name": "Blood pressure measurement",
+        "entity_type": "TEST",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 20,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 20,
+        "name": "divided_into"
+      },
+      "object": {
+        "id": 21,
+        "name": "Stage 1 Hypertension",
+        "entity_type": "SUBTYPE",
+        "attributes": [
+          {
+            "key": "criteria",
+            "value": "Systolic 130-139 or Diastolic 80-89 mmHg"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 21,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 21,
+        "name": "divided_into"
+      },
+      "object": {
+        "id": 22,
+        "name": "Stage 2 Hypertension",
+        "entity_type": "SUBTYPE",
+        "attributes": [
+          {
+            "key": "criteria",
+            "value": "Systolic ≥140 or Diastolic ≥90 mmHg"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 22,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 22,
+        "name": "associated_with"
+      },
+      "object": {
+        "id": 23,
+        "name": "Diabetes",
+        "entity_type": "CONDITION",
+        "attributes": [
+          {
+            "key": "context",
+            "value": "Common comorbidity"
+          }
+        ]
+      },
+      "inferred": false
+    },
+    {
+      "id": 23,
+      "subject": {
+        "id": 3,
+        "name": "Essential Hypertension",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 23,
+        "name": "associated_with"
+      },
+      "object": {
+        "id": 24,
+        "name": "Obesity",
+        "entity_type": "CONDITION",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 24,
+      "subject": {
+        "id": 1,
+        "name": "Article: Essential Hypertension Management and Treatment Guidelines",
+        "entity_type": "PUBLICATION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 24,
+        "name": "reports_case"
+      },
+      "object": {
+        "id": 5,
+        "name": "Patient (62-year-old male)",
+        "entity_type": "PERSON",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 25,
+      "subject": {
+        "id": 25,
+        "name": "Dr. Michael Chen",
+        "entity_type": "PERSON",
+        "attributes": [
+          {
+            "key": "role",
+            "value": "Author"
+          },
+          {
+            "key": "affiliation",
+            "value": "Cardiology Department, Medical Center"
+          }
+        ]
+      },
+      "predicate": {
+        "id": 25,
+        "name": "author_of"
+      },
+      "object": {
+        "id": 1,
+        "name": "Article: Essential Hypertension Management and Treatment Guidelines",
+        "entity_type": "PUBLICATION",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 26,
+      "subject": {
+        "id": 1,
+        "name": "Article: Essential Hypertension Management and Treatment Guidelines",
+        "entity_type": "PUBLICATION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 26,
+        "name": "has_doi"
+      },
+      "object": {
+        "id": 26,
+        "name": "10.1016/j.hypertension.2023.789012",
+        "entity_type": "IDENTIFIER",
+        "attributes": []
+      },
+      "inferred": false
+    },
+    {
+      "id": 27,
+      "subject": {
+        "id": 1,
+        "name": "Article: Essential Hypertension Management and Treatment Guidelines",
+        "entity_type": "PUBLICATION",
+        "attributes": []
+      },
+      "predicate": {
+        "id": 27,
+        "name": "published_on"
+      },
+      "object": {
+        "id": 27,
+        "name": "2023-09-20",
+        "entity_type": "DATE",
+        "attributes": []
+      },
+      "inferred": false
+    }
+  ],
+  "entity_types": [
+    "PUBLICATION",
+    "JOURNAL",
+    "CONDITION",
+    "SYMPTOM",
+    "CONCEPT",
+    "PERSON",
+    "MEDICATION",
+    "TEST",
+    "SUBTYPE",
+    "IDENTIFIER",
+    "DATE"
+  ]
+}

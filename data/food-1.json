@@ -1,0 +1,83 @@
+{
+  "name": "Pizza Knowledge Graph",
+  "description": "A knowledge graph about pizza varieties including ingredients, preparation methods, and culinary traditions",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Pizza",
+      "description": "Italian dish consisting of a flat round base of dough baked with toppings"
+    },
+    {
+      "id": "n2",
+      "label": "Margherita Pizza",
+      "description": "Classic Italian pizza with tomato, mozzarella, and basil"
+    },
+    {
+      "id": "n3",
+      "label": "Pepperoni Pizza",
+      "description": "Popular American pizza topped with pepperoni sausage"
+    },
+    {
+      "id": "n9",
+      "label": "Flour",
+      "description": "Powder made by grinding grains, used in baking"
+    },
+    {
+      "id": "n11",
+      "label": "Mozzarella",
+      "description": "Italian cheese traditionally made from buffalo milk"
+    },
+    {
+      "id": "n12",
+      "label": "Tomato Sauce",
+      "description": "Sauce made from tomatoes, commonly used on pizza"
+    },
+    {
+      "id": "n13",
+      "label": "Baking",
+      "description": "Cooking method using dry heat in an oven"
+    },
+    {
+      "id": "n14",
+      "label": "Italian Cuisine",
+      "description": "Traditional cooking style originating from Italy"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n3",
+      "label": "includes_type"
+    },
+    {
+      "source": "n1",
+      "target": "n11",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n12",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n9",
+      "label": "uses_ingredient"
+    },
+    {
+      "source": "n1",
+      "target": "n13",
+      "label": "prepared_by"
+    },
+    {
+      "source": "n1",
+      "target": "n14",
+      "label": "originates_from"
+    }
+  ]
+}

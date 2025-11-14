@@ -1,0 +1,33 @@
+{
+  "name": "Machine Learning Fundamentals",
+  "description": "A knowledge graph about basic machine learning concepts including supervised learning, neural networks, and model training",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Machine Learning",
+      "description": "The study of computer algorithms that improve through experience"
+    },
+    {
+      "id": "n2",
+      "label": "Supervised Learning",
+      "description": "Learning from labeled training data"
+    },
+    {
+      "id": "n3",
+      "label": "Neural Networks",
+      "description": "Computing systems inspired by biological neural networks"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "label": "includes"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "label": "uses"
+    }
+  ]
+}
